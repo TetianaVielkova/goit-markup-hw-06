@@ -896,7 +896,7 @@ img {
     fill: var(--color-dark-subtitle)
 }
 
-.form-field:focus ~ .form-input {
+.form-input:focus {
     border: 1px solid #2196F3;
 }
 
