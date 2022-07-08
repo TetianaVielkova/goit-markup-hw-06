@@ -506,19 +506,21 @@
               placeholder="Введите текст"
             ></textarea>
           </div>
-          <input
-            class="checkbox"
-            type="checkbox"
-            name="contract"
-            id="contract"
-          />
-          <label for="contract">
-            <svg class="icon-check" width="16" hieght="15">
-              <use href="./images/svg/icons.svg#icon-icon-check"></use>
-            </svg>
-            Соглашаюсь с рассылкой и принимаю
-            <span class="contract-link">Условия договора</span></label
-          >
+          <div class="check-contract">
+            <label for="contract">
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="contract"
+                id="contract"
+              />
+              <svg class="icon-check" width="16" hieght="15">
+                <use href="./images/svg/icons.svg#icon-check-white"></use>
+              </svg>
+              Соглашаюсь с рассылкой и принимаю
+              <span class="contract-link">Условия договора</span></label
+            >
+          </div>
           <button class="button-send" type="submit">Отправить</button>
         </form>
       </div>
