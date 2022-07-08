@@ -474,57 +474,6 @@ img {
 }
 
 
-/*-----------Modal--------------------------------*/
-
-.backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    background-color: rgba(0, 0, 0, 0.2);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-}
-
-.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    background-color: var(--light-background);
-    width: 528px;
-    height: 581px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
-    0px 1px 1px rgba(0, 0, 0, 0.14), 
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button-modal-close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: var(--light-background);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    margin-left: auto;
-    margin-right: 8px;
-    margin-top: 8px;
-    fill: var(--color-logo-dark);
-    cursor: pointer;
-}
-
 /*-----------Footer------------*/
 .footer {
     background-color: var(--dark-background);
@@ -646,7 +595,7 @@ img {
     margin-right: 12px;
 }
 
-.icon-form {
+.icon-form-footer {
     margin-left: 10px;
 }
 
@@ -810,4 +759,167 @@ img {
     color: var(--main-color);
 }
 
+/*-----------Modal--------------------------------*/
 
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: var(--light-background);
+    width: 528px;
+    height: 581px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--light-background);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: 8px;
+    margin-top: 8px;
+    fill: var(--color-logo-dark);
+    cursor: pointer;
+}
+
+.button-modal-close:hover {
+    fill: var(--accent-color);
+}
+
+.form-modal {
+    padding: 40px;
+    outline: 2px solid red;
+}
+
+.form-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color: var(--color-dark-subtitle);
+
+    margin-bottom: 12px;
+}
+
+.form-field {
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    margin: 0;
+    padding: 11px 12px 11px 42px;
+    
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    font: inherit;
+    border-radius: 4px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-label {
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.01em;
+    
+    color: #757575;
+    margin-bottom: 4px;
+}
+
+.checkbox {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.icon-form {
+    position: absolute;
+    
+
+    fill: var(--color-dark-subtitle)
+}
+
+.form-input:focus {
+    border: 1px solid #2196F3;
+}
+
+.form-input:focus ~ .icon-form {
+    fill: var(--accent-color);
+}
+
+.comment {
+    resize: none;
+    width: 448px;
+    height: 120px;
+    padding: 12px 16px;
+}
+
+.comment::placeholder{
+    font-size: 12px;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+}
+
+
+.button-send  {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    
+    color: var(--color-light-title);
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 10px 55px;
+    cursor: pointer;
+    border: none;
+}
+
+.contract-link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.icon-check {
+    display: block;
+    border:1px solid #212121;
+    fill: var(--color-light-title)
+}
