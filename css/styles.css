@@ -786,12 +786,12 @@ img {
 
     background-color: var(--light-background);
     width: 528px;
-    height: 581px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px;
 }
 
 .button-modal-close {
@@ -808,15 +808,12 @@ img {
     margin-top: 8px;
     fill: var(--color-logo-dark);
     cursor: pointer;
+    padding: 5px;
 }
+
 
 .button-modal-close:hover {
     fill: var(--accent-color);
-}
-
-.form-modal {
-    padding: 40px;
-    outline: 2px solid red;
 }
 
 .form-title {
@@ -848,6 +845,7 @@ img {
     border-radius: 4px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-sizing: var(--accent-color);
+    outline: transparent;
 }
 
 .form-label {
@@ -860,28 +858,6 @@ img {
     margin-bottom: 4px;
 }
 
-.checkbox {
-
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
-}
-
-.check-contract {
-    margin-top: 20px;
-    margin-bottom: 30px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .icon-form {
     position: absolute;
@@ -909,6 +885,9 @@ img {
     width: 448px;
     height: 120px;
     padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: transparent;
 }
 
 .comment::placeholder{
@@ -917,6 +896,10 @@ img {
     letter-spacing: 0.01em;
 
     color: rgba(117, 117, 117, 0.5);
+}
+
+.comment:focus {
+    border: 1px solid var(--accent-color);
 }
 
 
@@ -939,29 +922,58 @@ img {
     display: block;
 }
 
-.contract-link {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    text-decoration-line: underline;
-    
-    color: var(--accent-color);
-    cursor: pointer;
+
+
+.checkbox {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
 
+.check-contract {
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contract{
+    display: flex;
+    align-items: center;
+}
 .icon-check {
     width: 16px;
     height: 15px;
     display: inline-block;
     border: 2px solid #212121;
     border-radius: 4px;
-    fill: var(--light-background);
+    fill: var(--color-light-title);
     background-color: var(--light-background);
 
     margin-right: 7px;
 }
 
-.icon-check:checked {
+.checkbox:checked + .icon-check {
     background-color: var(--accent-color);
-    border: 0.2px solid var(--light-background);
+    border: 0.2px solid var(--accent-color);
+    background-origin: border-box;
+}
+
+.contract-link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+
+    color: var(--accent-color);
+    cursor: pointer;
 }
