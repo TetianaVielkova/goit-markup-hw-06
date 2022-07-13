@@ -493,6 +493,7 @@ img {
 
   color: var(--color-light-title);
   margin-top: 20px;
+  min-width: 231px;
 }
 
 .footer-item:not(:last-child) {
@@ -569,6 +570,7 @@ img {
 
 .position-form {
   display: flex;
+  margin-top: 20px;
 }
 
 .form {
@@ -587,6 +589,9 @@ img {
   padding: 15px;
 
   min-width: 358px;
+}
+
+.user-email {
   margin-right: 12px;
 }
 
@@ -792,16 +797,13 @@ img {
 
 .button-modal-close {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 8px;
+  top: 8px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: var(--light-background);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin-left: auto;
-  margin-right: 8px;
-  margin-top: 8px;
   fill: var(--color-logo-dark);
   cursor: pointer;
   padding: 5px;
@@ -830,6 +832,10 @@ img {
   flex-direction: column;
 }
 
+.comment-form {
+  margin-bottom: 20px;
+}
+
 .form-input {
   margin: 0;
   padding: 11px 12px 11px 42px;
@@ -854,12 +860,9 @@ img {
 
 .icon-form {
   position: absolute;
-  width: 18px;
-  height: 18px;
   top: 43px;
-  left: 12px;
+  left: 20px;
   transform: translate(-50%, -50%);
-  margin-left: 12px;
 
   fill: var(--color-dark-subtitle);
 }
@@ -937,7 +940,6 @@ img {
 }
 
 .check-contract {
-  margin-top: 20px;
   margin-bottom: 30px;
 
   display: flex;
